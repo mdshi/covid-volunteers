@@ -40,5 +40,7 @@ module CovidVolunteers
     config.action_dispatch.default_headers.merge!(
       'Cache-Control' => 'no-store, no-cache'
     )
+#    config.web_console.whiny_requests = false
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
   end
 end

@@ -25,6 +25,7 @@ services:
       EMAIL_ADDRESS: "email@address.com"
       RAILS_ENV: production
       SECRET_KEY_BASE: production_test_key
+      RAILS_SERVE_STATIC_FILES: 1
     volumes:
       - .:/myapp
     ports:
