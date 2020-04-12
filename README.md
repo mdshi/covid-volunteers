@@ -1,5 +1,8 @@
 # covid-volunteers
 
+https://hackernoon.com/dockerizing-an-existing-rails-postgresql-app-with-docker-compose-a30a7e1b3f40
+
+
 [![CircleCI build status](https://img.shields.io/cirrus/github/helpwithcovid/covid-volunteers?style=plastic)](https://circleci.com/gh/helpwithcovid/covid-volunteers)
 
 This repository stores the code for the https://helpwithcovid.com/ website.

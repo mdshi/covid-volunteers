@@ -1,0 +1,34 @@
+version: '2.1'
+
+volumes:
+  database:
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: "db"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+
+  covid-volunteers:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    environment:
+      ADMINS: "email@address.com,email_2@address.com"
+      EXCEPTION_NOTIFIERS: "email@address.com,email_2@address.com"
+      EMAIL_ADDRESS: "email@address.com"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    links:
+      - postgres
