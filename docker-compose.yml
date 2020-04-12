@@ -23,6 +23,8 @@ services:
       ADMINS: "email@address.com,email_2@address.com"
       EXCEPTION_NOTIFIERS: "email@address.com,email_2@address.com"
       EMAIL_ADDRESS: "email@address.com"
+      RAILS_ENV: production
+      SECRET_KEY_BASE: production_test_key
     volumes:
       - .:/myapp
     ports:

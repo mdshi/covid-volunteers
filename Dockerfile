@@ -13,5 +13,7 @@ RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 RUN bundle install
+RUN yarn install
+RUN rails db:setup
 
 COPY . /myapp
