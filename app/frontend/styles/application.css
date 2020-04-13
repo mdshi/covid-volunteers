@@ -2,6 +2,10 @@
 @import './tailwindcss/components.css';
 @import './tailwindcss/utilities.css';
 
+.turbolinks-progress-bar {
+  background: #fb8c00 !important;
+}
+
 .featured-groups:before {
   position: absolute;
   content: '';

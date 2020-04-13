@@ -13,6 +13,5 @@ RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 RUN bundle install
-RUN yarn install
 
 COPY . /myapp
