@@ -2,7 +2,22 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        indigo: {
+          '50': '#fff3e0',
+          '100': '#ffe0b2',
+          '200': '#ffcc80',
+          '300': '#ffb74d',
+          '400': '#ffa726',
+          '500': '#ff9800',
+          '600': '#fb8c00',
+          '700': '#f57c00',
+          '800': '#ef6c00',
+          '900': '#e65100',
+        }
+      }
+    },
     container: {
       center: true,
     },
@@ -19,7 +34,7 @@ module.exports = {
     * Spacing utilities
     * Ex: .space-y-bottom-2 space-x-right-4
     */
-    plugin(function({ addUtilities, theme }) {
+    plugin(function ({addUtilities, theme}) {
       const property = 'margin'
       const axes = ['x', 'y']
       const directions = {
@@ -47,7 +62,7 @@ module.exports = {
             childrenProperties[`${property}-${direction}`] = value
 
             const properties = {
-              '>*' : childrenProperties,
+              '>*': childrenProperties,
             }
             utilities[className] = properties
           })

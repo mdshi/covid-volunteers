@@ -10,7 +10,7 @@
 
 user = User.create!(
   email: 'user@gmail.com',
-  name: 'Bob Smith',
+  name: 'Anteneh Gebeyaw',
   password: 'password',
   password_confirmation: 'password',
   about: 'about section',
@@ -22,7 +22,7 @@ user = User.create!(
 
 user2 = User.create!(
   email: 'user2@gmail.com',
-  name: 'Jill Bob',
+  name: 'Nati Abebe',
   password: 'password',
   password_confirmation: 'password',
   about: 'about section',
@@ -32,31 +32,220 @@ user2 = User.create!(
   level_of_availability: '99-100 hours a day'
 )
 
-user3 = User.create!(email: 'user3@gmail.com', name: 'Luv2Code', password: 'password', password_confirmation: 'password')
-user4 = User.create!(email: 'user4@gmail.com', name: 'rspineanu', password: 'password', password_confirmation: 'password')
-user5 = User.create!(email: 'user5@gmail.com', name: 'cpu', password: 'password', password_confirmation: 'password')
-user6 = User.create!(email: 'user6@gmail.com', name: 'jamiew', password: 'password', password_confirmation: 'password')
+user3 = User.create!(
+  email: 'user3@gmail.com',
+  name: 'Gobena Merga',
+  password: 'password',
+  password_confirmation: 'password'
+)
+
+user4 = User.create!(
+  email: 'user4@gmail.com',
+  name: 'Amanu',
+  password: 'password',
+  password_confirmation: 'password'
+)
+
+user5 = User.create!(
+  email: 'user5@gmail.com',
+  name: 'Helom Berhane',
+  password: 'password',
+  password_confirmation: 'password'
+)
+
+user6 = User.create!(
+  email: 'user6@gmail.com',
+  name: 'Yohannes Haile',
+  password: 'password',
+  password_confirmation: 'password'
+)
 
 # PROJECTS
-project1 = user.projects.create(user: user, status: ALL_PROJECT_STATUS.shuffle.first, name: 'Act Now Foundation - Import & distribution of 10-minute at home COVID-19 test kits', target_location: 'USA', description: 'A cool description', accepting_volunteers: true, highlight: true)
+project1 = user.projects.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Social Media Asset Creation',
+  target_location: 'Ethiopia',
+  description: 'Creating and verifying COVID-19 prevention health information and sharing it on all social media platforms',
+  accepting_volunteers: true,
+  highlight: true
+)
 project1.skill_list.add('Anything')
 project1.save! # FIXME is this necessary?
 
 project2 = Project.create!(
   user: user2,
   status: ALL_PROJECT_STATUS.shuffle.first,
-  name: 'One Gazillion Masks',
-  description: 'A cool description',
+  name: 'Social Media outreach and tracking',
+  description: 'Establish contact and confirm participation of all influencer & social media partners',
   highlight: true,
-  accepting_volunteers: false)
+  accepting_volunteers: false
+)
 project2.skill_list.add('Design')
 project2.save! # FIXME is this necessary?
 
-project3 = Project.create(user: user, status: ALL_PROJECT_STATUS.shuffle.first, name: 'Virtual homework supervision to help overwhelmed parents while school is closed project', target_location: 'Brooklyn', description: 'With elementary schools suddenly closed for the rest of the year, parents are struggling to balance work, caring for others and the sudden responsibility for keeping their children educated and on track for school.', accepting_volunteers: true, highlight: true)
+project3 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Public Dashboard',
+  target_location: 'Ethiopia',
+  description: 'Unified internal dashboard that shows real-time data on COVID-19 cases',
+  accepting_volunteers: true,
+  highlight: true
+)
 
-project4 = Project.create(user: user, status: ALL_PROJECT_STATUS.shuffle.first, name: 'Resistbot', description: %{Resistbot is a multipurpose and multifunction chatbot. Right now it's the easiest way to lobby both federal and state officials who are currently crafting a legislative response to the pandemic. Our end goal is to give everyone a voice and able to fight for what they want to see, no matter what it is, from social distancing measures at the state level, to federal UBI stimulus, to no corporate bailouts, to more health care supplies, and more. We've also just built covid-19 specific functionality to inform users of a variety of important information for their home state.}, accepting_volunteers: true, highlight: true)
+project4 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Private Ops Dashboard',
+  description: 'Creating a streamlined process to deploy code using really cool AWS tooling - containers, Code Build, Code Pipeline, CloudFormation',
+  accepting_volunteers: true,
+  highlight: true
+)
 
-project5 = Project.create(user: user, status: ALL_PROJECT_STATUS.shuffle.first, name: 'Selfie lenses to spread public health into in a fun way project ', description: %{We are a group called Lefty Lenses who have been applying selfie lenses (like the Snapchat puppy filter) to politics for the 2020 election. Our lenses have reached 125M people in 10 weeks, and we've spent $0.}, accepting_volunteers: true, highlight: true)
+project5 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'API',
+  description: 'Creating a single beautiful API to rule them all for critical systems to access and push data- forms, dashboards, bots, SMS',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project6 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Awareness Bots (Telegram, WhatsApp, FB)',
+  description: 'Creating a bot to show hotel vacancies for travelers that need to be quarantined',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project7 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Data Collection Bots (Telegram, WhatsApp, FB)',
+  description: 'Unified internal dashboard that shows real-time data on COVID-19 cases',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project8 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Awareness SMS (2-way)',
+  description: 'Creating a streamlined process to deploy code using really cool AWS tooling - containers, Code Build, Code Pipeline, CloudFormation',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project9 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Awareness Site',
+  description: 'Creating a single beautiful API to rule them all for critical systems to access and push data- forms, dashboards, bots, SMS',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project10 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Hotel Vacancy Project',
+  description: 'Creating a bot to show hotel vacancies for travelers that need to be quarantined',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project11 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Data Collection Bots (Telegram, WhatsApp, FB)',
+  description: 'Unified internal dashboard that shows real-time data on COVID-19 cases',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project12 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Awareness SMS (2-way)',
+  description: 'Creating a streamlined process to deploy code using really cool AWS tooling - containers, Code Build, Code Pipeline, CloudFormation',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project13 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Awareness Site',
+  description: 'Creating a single beautiful API to rule them all for critical systems to access and push data- forms, dashboards, bots, SMS',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project14 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Hotel Vacancy Project',
+  description: 'Creating a bot to show hotel vacancies for travelers that need to be quarantined',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project15 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'DIY Masks',
+  description: 'Research, source and create Personal Protection Equipment alternatives for the general public  in Ethiopia.',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project16 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'DIY Ventilators',
+  description: 'Research, source and create Mechanical Ventilator alternatives in Ethiopia.',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project17 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'DIY Face Shields',
+  description: 'Research and source the production of face shields for medical professionals in Ethiopia.',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project18 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Test Kits  (Initial Phase)',
+  description: 'Research and source local production of test kits in Ethiopia.',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project19 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Quarantine location delivery',
+  description: 'Funding and facilitating food and essential items delivery for quarantine centers, food-insecure families in Ethiopia, and healthcare workers',
+  accepting_volunteers: true,
+  highlight: true
+)
+
+project20 = Project.create(
+  user: user,
+  status: ALL_PROJECT_STATUS.shuffle.first,
+  name: 'Care packages/ delivery promotion to communities',
+  description: 'Facilitate and promote food delivery in general; Source and support the delivery of care package/food and essentials/ for food-insecure and vulnerable families in Ethiopia.',
+  accepting_volunteers: true,
+  highlight: true
+)
 
 # VOLUNTEERS
 project1.volunteered_users << user3
@@ -89,4 +278,19 @@ project2.save
 project3.save
 project4.save
 project5.save
+project6.save
+project7.save
+project8.save
+project9.save
+project10.save
+project11.save
+project12.save
+project13.save
+project14.save
+project15.save
+project16.save
+project17.save
+project18.save
+project19.save
+project20.save
 
