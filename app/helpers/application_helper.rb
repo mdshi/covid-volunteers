@@ -58,7 +58,7 @@ module ApplicationHelper
   end
 
   def discord_nav_link_class(variant = 'DESKTOP')
-    nav_link_inactive_class(variant)
+    params[:controller] == 'invites' && [ 'index' ].include?(params[:action]) ? nav_link_active_class(variant) : nav_link_inactive_class(variant)
   end
 
   def alert_container_class_for_flash_type type

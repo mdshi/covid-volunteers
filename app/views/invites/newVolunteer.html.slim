@@ -1,0 +1,17 @@
+.invite
+  h1  Ethiopia COVID-19 Response Team 
+
+  p
+    | Submit your email address below and our actively working robots will automatically send you
+      an invite to our Slack organization :-)
+
+  = form_for @invites do |f|
+    = f.email_field :email, size: 40, placeholder: "email@example.com"
+    = f.submit
+
+  p
+    |
+      Already have an account? Click <a href="https://join.slack.com/t/ethiopia-covid19/shared_invite/zt-dwug5v74-9CqPET6dBEPFjY7D0lzTKw">here</a> to sign in.
+
+.logo
+  = image_tag "public\logo-s.png"

@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
   # Redirect www to non-www.
   if ENV['CANONICAL_HOST']
     constraints(:host => Regexp.new("^(?!#{Regexp.escape(ENV['CANONICAL_HOST'])})")) do
@@ -23,6 +23,10 @@ Rails.application.routes.draw do
     collection do
       get :volunteered
       get :own
+    end
+
+    resources :invites, only: [:new, :create] do
+      get :enqueued, on: :collection
     end
 
     member do
